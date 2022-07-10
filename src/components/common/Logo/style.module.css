@@ -1,0 +1,10 @@
+.header {
+  height: 90px;
+  background-color: white;
+}
+.header img {
+  display: block;
+  height: 100%;
+  margin: 0 auto;
+  cursor: pointer;
+}
