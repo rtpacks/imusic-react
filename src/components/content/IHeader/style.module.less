@@ -1,0 +1,22 @@
+.i-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  /* 头部搜索框样式调整，注意应该加上:global的限制，否则由于按需加入的原因，未在组件中使用的样式不会被引入，而:global表示引入，但是又有前缀的限制 */
+  :global {
+    .ant-input {
+      border-top-left-radius: 12px !important;
+      border-bottom-left-radius: 12px !important;
+      outline: none;
+    }
+    .ant-input-search-button {
+      border-top-right-radius: 12px !important;
+      border-bottom-right-radius: 12px !important;
+    }
+    .ant-input-search {
+      width: 300px !important;
+    }
+  }
+}
