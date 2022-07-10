@@ -1,18 +1,18 @@
 .screen {
   height: 100vh;
-  display: flex; 
+  display: flex;
   justify-content: center;
-  align-items: center
+  align-items: center;
 }
 
 .w {
   overflow: hidden;
-  min-width: 1100px!important;
-  max-width: 1100px!important;
+  min-width: 1100px !important;
+  max-width: 1100px !important;
   height: 680px;
   border-radius: 12px;
   background-color: peachpuff;
-  box-shadow: 0 0 26px 16px rgba(131, 131, 131, .4);
+  box-shadow: 0 0 26px 16px rgba(131, 131, 131, 0.4);
 }
 
 .bg-white {
@@ -20,6 +20,47 @@
 }
 
 .bg {
-  background: url('./assets/images/bg2.png') no-repeat;
+  background: url("./assets/images/bg2.png") no-repeat;
   background-size: 100% auto;
+}
+
+/* 所有图片不能选择拖动 */
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* Memu-item选中后的样式 */
+.ant-menu-item-selected {
+  width: 86% !important;
+  margin: 0 auto;
+  color: black !important;
+  background-color: rgb(227, 227, 227) !important;
+  border: none !important;
+  border-radius: 12px;
+}
+
+/* 去除item选中后右边框 */
+.ant-menu-item-selected::after {
+  display: none !important;
+  /* width: 0!important; */
+}
+
+/* 禁止选择 */
+.ant-menu-title-content,
+.ant-menu-item-selected,
+.ant-menu-item-group-title {
+  user-select: none;
+}
+
+/* Nav标题大小 */
+.ant-menu-item-group-title {
+  text-align: center;
+  font-size: 13px;
+}
+
+/* Memu的样式调整 */
+.ant-menu-inline.ant-menu-root .ant-menu-item,
+.ant-menu-inline.ant-menu-root .ant-menu-submenu-title {
+  transition: all 0.5s;
 }

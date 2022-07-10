@@ -4,35 +4,3 @@
   height: 100%;
   /* 无论是calc还是flex，如果需要子元素自适应沾满剩余的高度，都需要指定父元素的height属性 */
 }
-.i-nav :global {
-  /* Memu-item选中后的样式 */
-  /* 去除item选中后右边框 */
-  /* 禁止选择 */
-  /* Nav标题大小 */
-  /* Memu的样式调整 */
-}
-.i-nav :global .ant-menu-item-selected {
-  width: 86% !important;
-  margin: 0 auto;
-  color: black !important;
-  background-color: #e3e3e3 !important;
-  border: none !important;
-  border-radius: 12px;
-}
-.i-nav :global .ant-menu-item-selected::after {
-  display: none !important;
-  /* width: 0!important; */
-}
-.i-nav :global .ant-menu-title-content,
-.i-nav :global .ant-menu-item-selected,
-.i-nav :global .ant-menu-item-group-title {
-  user-select: none;
-}
-.i-nav :global .ant-menu-item-group-title {
-  text-align: center;
-  font-size: 13px;
-}
-.i-nav :global .ant-menu-inline.ant-menu-root .ant-menu-item,
-.i-nav :global .ant-menu-inline.ant-menu-root .ant-menu-submenu-title {
-  transition: all 0.4s;
-}
