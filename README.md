@@ -30,11 +30,11 @@ antd按需引用可以使用两个插件，其中`vite-plugin-imp`不知道是�
 ```js
 import { createStyleImportPlugin, VantResolve } from 'vite-plugin-style-import';
 export default defineConfig({
-	 plugins: [
-	    vue(),
-	    createStyleImportPlugin({
-	      resolves: [VantResolve()],
-	    }),
+	plugins: [
+		vue(),
+		createStyleImportPlugin({
+			resolves: [VantResolve()],
+		}),
   ],
 })
 ```
