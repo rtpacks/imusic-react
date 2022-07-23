@@ -24,7 +24,9 @@ const Header = memo((props) => {
           width: 200,
         }}
       />
-      <div style={{display: "flex", 'align-items': "center", userSelect: "none"}}>
+      <div
+        style={{ display: "flex", alignItems: "center", userSelect: "none" }}
+      >
         <Avatar
           size="small"
           icon={<UserOutlined />}
@@ -35,7 +37,7 @@ const Header = memo((props) => {
           fontSize="16px"
           color="#777"
           type="icon-hanbaobao"
-          style={{ "margin": "0 -18px 0 18px"}}
+          style={{ margin: "0 -18px 0 18px" }}
         />
       </div>
     </div>

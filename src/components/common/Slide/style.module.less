@@ -1,10 +1,11 @@
 .slide {
   overflow: hidden;
-  overflow-y: overlay; /* 显式滚动条，但是不占用位置，兼容性极差。滚动条无法使用定位来实现不占用位置 */
+  overflow-y: overlay; /* 显式滚动条，但是不占用位置，兼容性差。滚动条无法使用定位来实现不占用位置 */
   // height: 300px; /* 不指定高度，外界调整 */
   &::-webkit-scrollbar {
     display: none;
   }
+  background-color: #FAFAFA;
 }
 
 .slide:hover {
