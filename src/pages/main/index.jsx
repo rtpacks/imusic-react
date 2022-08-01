@@ -6,6 +6,7 @@ const { Header, Footer, Sider, Content } = Layout;
 
 import INav from "@/components/content/INav";
 import IHeader from "@/components/content/IHeader";
+import IContent from "@/components/content/IContent";
 
 import "./style.css";
 
@@ -22,7 +23,7 @@ const Main = memo(() => {
         </Header>
 
         <Content>
-          组件的渲染
+          <IContent></IContent>
           <Outlet></Outlet>
         </Content>
         <Footer>Footer</Footer>
