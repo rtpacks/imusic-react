@@ -8,11 +8,11 @@ import INav from "@/components/content/INav";
 import IHeader from "@/components/content/IHeader";
 import IContent from "@/components/content/IContent";
 
-import "./style.css";
+import "./style.less";
 
 const Main = memo(() => {
   return (
-    <Layout className="w" style={{ maxWidth: "1100px" }}>
+    <Layout className="w main" style={{ maxWidth: "1100px" }}>
       <Sider width="216px" className="bg-white">
         <INav></INav>
       </Sider>
@@ -22,7 +22,7 @@ const Main = memo(() => {
           <IHeader></IHeader>
         </Header>
 
-        <Content>
+        <Content className="scroll">
           <IContent></IContent>
           <Outlet></Outlet>
         </Content>

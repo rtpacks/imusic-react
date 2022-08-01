@@ -3,32 +3,58 @@
   width: 86% !important;
   margin: 0 auto;
   color: black !important;
-  background-color: rgb(227, 227, 227) !important;
+  background-color: #e3e3e3 !important;
   border: none !important;
   border-radius: 12px;
 }
-
 /* 去除item选中后右边框 */
 .ant-menu-item-selected::after {
   display: none !important;
   /* width: 0!important; */
 }
-
 /* 禁止选择 */
 .ant-menu-title-content,
 .ant-menu-item-selected,
 .ant-menu-item-group-title {
   user-select: none;
 }
-
 /* Nav标题大小 */
 .ant-menu-item-group-title {
   text-align: center;
   font-size: 13px;
 }
-
 /* Memu的样式调整 */
 .ant-menu-inline.ant-menu-root .ant-menu-item,
 .ant-menu-inline.ant-menu-root .ant-menu-submenu-title {
   transition: all 0.46s;
+}
+.main .scroll {
+  overflow: hidden;
+  overflow-y: overlay;
+  /* 显式滚动条，但是不占用位置，兼容性差。滚动条无法使用定位来实现不占用位置 */
+  height: 100%;
+  scroll-behavior: smooth;
+  background-color: #fafafa;
+}
+.main .scroll::-webkit-scrollbar {
+  display: none;
+}
+.main .scroll:hover::-webkit-scrollbar {
+  display: block;
+}
+.main .scroll:hover::-webkit-scrollbar {
+  /*滚动条整体样式*/
+  width: 10px;
+  /*高宽分别对应横竖滚动条的尺寸*/
+  height: 1px;
+}
+.main .scroll:hover::-webkit-scrollbar-thumb {
+  /*滚动条里面小方块*/
+  border-radius: 10px;
+  background: #dcdada;
+}
+.main .scroll:hover::-webkit-scrollbar-track {
+  /*滚动条里面轨道*/
+  border-radius: 10px;
+  background: #fafafa;
 }
