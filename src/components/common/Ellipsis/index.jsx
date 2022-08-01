@@ -18,15 +18,16 @@ const Ellipsis = memo(
 
     color: #666;
 
-    font-size: 12px;  
+    font-size: 12px;
     line-height: 1.2;
-    
-    transition: all .3s;
+
+    transition: all 0.3s;
+    user-select: none;
+    cursor: pointer;
 
     &:hover {
       color: ${(props) => props.activeColor || "#e75555"};
     }
-
   `
 );
 
