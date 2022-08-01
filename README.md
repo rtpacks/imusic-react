@@ -13,7 +13,9 @@
 
 - https://blog.csdn.net/qq_43382853/article/details/108324623
 
-## 插件选择
+## 插件（库）
+
+### antd
 
 antd按需引用可以使用两个插件，其中 `vite-plugin-imp`不知道是我是否配置不对，有一些全局样式不能引入，而使用 `vite-plugin-style-import`无问题，`vite-plugin-style-import`依赖于 `consola`。注意在 `vite-plugin-style-import`2.0版本需要使用的是createStyleImportPlugin而不是styleImprot！
 
@@ -38,10 +40,22 @@ antd按需引用可以使用两个插件，其中 `vite-plugin-imp`不知道是�
 import { createStyleImportPlugin, VantResolve } from 'vite-plugin-style-import';
 export default defineConfig({
 	plugins: [
-		vue(),
+		react(),
 		createStyleImportPlugin({
 			resolves: [VantResolve()],
 		}),
   ],
 })
 ```
+
+### emotion
+
+为了便于css的操作，综合下来选择使用`emotion`。
+
+原因：
+
+- `module.css`过于麻烦，内联样式不够完美，一些伪类、伪元素不能使用
+- `styled-components`的styled不能单独书写css，导致增加很多的组件标签，组件标签多了之后甚至难以检查哪些是styled组件，当然还是可以使用特定的前缀名来识别的，但是还是没有emotion使用方便。
+- `tailwindcss`，学习成本高不说，写类名、调试还不如自己写css，个人不是很喜欢这种库。
+
+原有打算选择`module.css`即可，但是后来发现样式选择过于困难，于是选择`module.css + emotion`，很完美的搭配 。
