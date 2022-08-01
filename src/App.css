@@ -29,3 +29,12 @@ img {
   user-select: none;
   -webkit-user-drag: none;
 }
+
+/* 两行省略号 */
+.ellipsis-2 {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}

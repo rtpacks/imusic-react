@@ -23,8 +23,8 @@ antd按需引用可以使用两个插件，其中 `vite-plugin-imp`不知道是�
 ```json
 {
 	"devDependencies": {
-		"vite-plugin-style-import": "^2.0.0",
-		"consola": "^2.15.3"
+	"vite-plugin-style-import": "^2.0.0",
+	"consola": "^2.15.3"
 	},
 	"resolutions": {
 		"console": "consola"
