@@ -26,7 +26,7 @@ const Ellipsis = memo(
     cursor: pointer;
 
     &:hover {
-      color: ${(props) => props.activeColor || "#e75555"};
+      color: ${(props) => props.activeColor || "#FF6160"};
     }
   `
 );
