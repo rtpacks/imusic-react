@@ -3,6 +3,7 @@
   overflow-y: overlay;
   /* 显式滚动条，但是不占用位置，兼容性差。滚动条无法使用定位来实现不占用位置 */
   height: 100%;
+  scroll-behavior: smooth;
   background-color: #fafafa;
 }
 .scroll::-webkit-scrollbar {
