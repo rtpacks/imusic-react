@@ -2,12 +2,12 @@ import React, { memo } from "react";
 
 import { Menu } from "antd";
 
-import IconFont from '@/components/common/IconFont'
+import IconFont from "@/components/common/IconFont";
 import style from "./style.module.less";
 
 /* 在线音乐 */
 const online_music = [
-  getItem("推荐", "推荐", <IconFont type="icon-xingxing"/>),
+  getItem("推荐", "推荐", <IconFont type="icon-xingxing" />),
   getItem("音乐馆", "音乐馆", <IconFont type="icon-yinle" />),
   getItem("视频", "视频", <IconFont type="icon-shipin1" />),
   getItem("电台", "电台", <IconFont type="icon-diantai" />),
@@ -15,10 +15,10 @@ const online_music = [
 
 /* 我的音乐 */
 const mine_music = [
-  getItem("我喜欢", "我喜欢", <IconFont type="icon-xihuan-mianxing"/>),
-  getItem("本地和下载", "本地和下载", <IconFont type="icon-pc-monitor"/>),
-  getItem("最近播放", "最近播放", <IconFont type="icon-yinleliebiao1"/>),
-  getItem("已购音乐", "已购音乐", <IconFont type="icon-dagouyouquan"/>),
+  getItem("我喜欢", "我喜欢", <IconFont type="icon-xihuan-mianxing" />),
+  getItem("本地和下载", "本地和下载", <IconFont type="icon-pc-monitor" />),
+  getItem("最近播放", "最近播放", <IconFont type="icon-yinleliebiao1" />),
+  getItem("已购音乐", "已购音乐", <IconFont type="icon-dagouyouquan" />),
 ];
 
 /* 歌单 */
@@ -56,14 +56,14 @@ function getItem(label, key, icon, children, type) {
 }
 
 const Slide = memo((props) => {
-
   return (
     <div
       className={style.slide}
-      style={props?.height ? {height: props.height} : {}}
+      style={props?.height ? { height: props.height } : {}}
     >
       <Menu
         mode="inline"
+        defaultSelectedKeys={["推荐"]}
         defaultOpenKeys={defaultKeys}
         style={{
           width: "100%",
