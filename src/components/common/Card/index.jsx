@@ -6,7 +6,10 @@ import Ellipsis from "../Ellipsis";
 
 const Wrapper = styled.div`
   position: "relative";
-  width: ${(props) => props.width || "22%"};
+  width: ${(props) => props.width || "25%"};
+  margin: 4px 0;
+  margin-bottom: 6px;
+  padding: 0 1.3%;
   cursor: "pointer";
   user-select: "none" !important;
 `;
@@ -41,4 +44,11 @@ const Card = memo((props) => {
   );
 });
 
+const createWidthCard = (width) => (props) =>
+  <Card {...(props || {})} width={width} />;
+
+const Card33 = createWidthCard("33.33%");
+const Card50 = createWidthCard("50%");
+
+export { Card33, Card50 };
 export default Card;
