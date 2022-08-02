@@ -1,4 +1,4 @@
-很遗憾，使用的后台服务又挂了，貌似QQ音乐更改了接口。暂停开发，等大佬修复了接口再继续吧，没有网易云音乐会员，听歌有限制。
+貌似QQ音乐更改了接口，暂停开发，没有网易云音乐会员，听歌有限制。搭好了页面组件，之后用uniapp构建移动端。
 
 ## vite + react + antd
 
@@ -24,13 +24,13 @@ antd按需引用可以使用两个插件，其中 `vite-plugin-imp`不知道是�
 
 ```json
 {
-	"devDependencies": {
-	"vite-plugin-style-import": "^2.0.0",
-	"consola": "^2.15.3"
-	},
-	"resolutions": {
-		"console": "consola"
-	}
+  "devDependencies": {
+  "vite-plugin-style-import": "^2.0.0",
+  "consola": "^2.15.3"
+  },
+  "resolutions": {
+    "console": "consola"
+  }
 }
 ```
 
@@ -39,12 +39,12 @@ antd按需引用可以使用两个插件，其中 `vite-plugin-imp`不知道是�
 ```js
 import { createStyleImportPlugin, VantResolve } from 'vite-plugin-style-import';
 export default defineConfig({
-	plugins: [
-		react(),
-		createStyleImportPlugin({
-			resolves: [VantResolve()],
-		}),
-  ],
+ plugins: [
+    react(),
+    createStyleImportPlugin({
+      resolves: [VantResolve()],
+    }),
+ ],
 })
 ```
 
