@@ -17,7 +17,7 @@
 
 ### antd
 
-antd按需引用可以使用两个插件，其中 `vite-plugin-imp`不知道是我是否配置不对，有一些全局样式不能引入，而使用 `vite-plugin-style-import`无问题，`vite-plugin-style-import`依赖于 `consola`。注意在 `vite-plugin-style-import`2.0版本需要使用的是createStyleImportPlugin而不是styleImprot！
+antd按需引用可以使用两个插件，其中 `vite-plugin-imp`不知道是我是否配置不对，有一些全局样式不能引入，而使用 `vite-plugin-style-import`无问题，`vite-plugin-style-import`依赖于 `consola`。注意在 `vite-plugin-style-import`2.0版本需要使用的是createStyleImpor	tPlugin而不是styleImprot！
 
 - `npm i vite-plugin-style-import consola -D`
 - package.json
@@ -50,7 +50,7 @@ export default defineConfig({
 
 ### emotion
 
-为了便于css的操作，综合下来选择使用`emotion`。
+为了便于css的操作，综合下来选择使用 `emotion`。
 
 原因：
 
@@ -58,4 +58,14 @@ export default defineConfig({
 - `styled-components`的styled不能单独书写css，导致增加很多的组件标签，组件标签多了之后甚至难以检查哪些是styled组件，当然还是可以使用特定的前缀名来识别的，但是还是没有emotion使用方便。
 - `tailwindcss`，学习成本高不说，写类名、调试还不如自己写css，个人不是很喜欢这种库。
 
-原有打算选择`module.css`即可，但是后来发现样式选择过于困难，于是选择`module.css + emotion`，很完美的搭配 。
+原有打算选择 `module.css`即可，但是后来发现样式选择过于困难，于是选择 `module.css + emotion`，很完美的搭配 。
+
+## 问题
+
+### 重复渲染
+
+尽管自己在努力抽出容器组件和展示组件，但可能由于习惯写内联函数、内联对象，所以项目目前还是会有无意义的重复渲染，这也是React难度高的原因，写出来简单，性能优化很快困难。
+
+### react-activation无效
+
+未找到原因所在，未能实现keep-alive功能

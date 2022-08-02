@@ -1,12 +1,12 @@
-import React, { memo } from "react";
+import React, { memo, useState, useEffect } from "react";
 import { useRoutes } from "react-router-dom";
 
 import routes from "./router";
 
 import "./App.css";
-
 const App = memo(() => {
-  return <div className="screen">{useRoutes(routes)}</div>;
+  const elements = useRoutes(routes);
+  return <div className="screen">{elements}</div>;
 });
 
 export default App;
