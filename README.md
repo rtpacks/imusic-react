@@ -2,6 +2,8 @@
 
 目前搭好了页面组件，处理好数据就可以搭好项目了，之后用uniapp构建移动端。
 
+![IMG-20220802-182359](README.assets/IMG-20220802-182359.jpg)
+
 ## vite + react + antd
 
 - https://zhuanlan.zhihu.com/p/518339176
